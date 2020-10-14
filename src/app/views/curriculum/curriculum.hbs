@@ -1,0 +1,169 @@
+<div style="position: absolute; top: 25px; left: 50px; right: 50px; text-align: justify;">
+
+  <div style="text-align: center;">
+    <h2>Currículo</h2>
+
+    {{#if office}}
+    <h3>Vaga predendida: {{{ office }}}</h3>
+    {{/if}}
+
+  </div>
+
+
+  <h3>Dados Pessoais</h3>
+  <div>
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Nome: </td>
+        <td>{{{ name }}}</td>
+        <td style="font-weight: bold;">Email:</td>
+        <td>{{{ email }}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Cel: </td>
+        <td> {{{ fone }}}</td>
+        <td style="font-weight: bold;">Curso: </td>
+        <td>{{{ currentCourse }}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">CPF: </td>
+        <td> {{{ cpf }}}</td>
+        <td style="font-weight: bold;">CNH: </td>
+        <td>{{{ cnh }}}</td>
+
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Nasc.: </td>
+        <td>{{{ birthFormated }}}</td>
+        <td style="font-weight: bold;">Sexo: </td>
+        <td>{{{ sex }}}</td>
+
+      </tr>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Estado Civil: </td>
+        <td>{{{ maritalStatus }}}</td>
+        <td style="font-weight: bold;">N. de Filhos:</td>
+        <td>{{{ children }}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">End.:</td>
+        <td>{{{ street }}}</td>
+        <td style="font-weight: bold;">Número:</td>
+        <td>{{{ number }}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Bairro:</td>
+        <td> {{{ neighborHood }}}</td>
+        <td style="font-weight: bold;">Cidade:</td>
+        <td>{{{ city }}}</td>
+        <td style="font-weight: bold;">UF:</td>
+        <td>{{{ uf }}}</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <h3>Formação Acadêmica</h3>
+
+  {{#each studentAcademicEducation}}
+  <div>
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Instituição:</td>
+        <td>{{{ dataValues.institution }}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Curso:</td>
+        <td>{{{ dataValues.description }}}</td>
+      </tr>
+
+
+    </table>
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Dt. Inicio:</td>
+        <td>{{{ dataValues.initialYear }}}</td>
+        <td style="font-weight: bold;">Dt. Previsão/Termino:</td>
+        <td>{{{ dataValues.finalYear }}}</td>
+      </tr>
+
+    </table>
+
+  </div>
+  {{/each}}
+  <h3>Conhecimentos Adicionais</h3>
+  <div>
+
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Inglês:</td>
+        <td>{{{ inglesLevel }}}</td>
+        <td style="font-weight: bold;">Espanhol:</td>
+        <td>{{{ espanholLevel }}}</td>
+        <td style="font-weight: bold;">Outras Linguas:</td>
+        <td>{{{ othersLevel }}}</td>
+      </tr>
+
+    </table>
+    <table>
+
+      <tr>
+        <td style="font-weight: bold;">Computação:</td>
+        <td>{{{ computerLevel }}}</td>
+      </tr>
+
+    </table>
+  </div>
+  <h3>Experiências Profissionais</h3>
+
+  {{#each studentProfessionalExperiences}}
+  <div>
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Empresa:</td>
+        <td>{{{ dataValues.company }}}</td>
+
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Cargo:</td>
+        <td>{{{ dataValues.office }}}</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Dt. Admissão:</td>
+        <td>{{{ dataValues.admissionDate }}}</td>
+        <td style="font-weight: bold;">Dt. Demissão:</td>
+        {{#if dataValues.resignationDate}}
+        <td>{{{ dataValues.resignationDate }}}</td>
+        {{else}}
+        <td>Até a presente data</td>
+        {{/if}}
+      </tr>
+      {{#if dataValues.salary}}
+      <tr>
+        <td style="font-weight: bold;">Salario:</td>
+        <td>R${{{ dataValues.salary }}},00</td>
+      </tr>
+      {{/if}}
+    </table>
+    {{#if dataValues.reasonDismissal}}
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Motivo:</td>
+        <td>{{{ dataValues.reasonDismissal }}}</td>
+      </tr>
+    </table>
+    {{/if}}
+    <table>
+      <tr>
+        <td style="font-weight: bold;">Atividades exercidas:</td>
+        <td>{{{ dataValues.developedActivities }}}</td>
+      </tr>
+    </table>
+  </div>
+  {{/each}}
+
+</div>
