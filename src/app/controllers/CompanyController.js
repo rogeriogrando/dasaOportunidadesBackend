@@ -22,7 +22,7 @@ class CompanyController {
         .status(400)
         .json({ error: 'Campos com informações incorretas.' });
     }
-    console.log(req.body);
+
     const userExist = await Users.findOne({
       where: { email: req.body.email, active: true },
     });
@@ -46,7 +46,7 @@ class CompanyController {
     });
 
     const emailist = await AdminEmails.findAll();
-    console.log(emailist);
+
 
     emailist.map(async item => {
       await Mail.sendMail({

@@ -16,7 +16,6 @@ class StudentSendCurriculumController {
   async store(req, res) {
     const {nameCompany, companyJobsId, emailCompany, office} = req.body;
 
-    console.log(req.body)
     const { category } = await User.findByPk(req.userId);
     if (category !== 'aluno') {
       return res.status(403).json({ error: 'Acesso não autorizado.' });

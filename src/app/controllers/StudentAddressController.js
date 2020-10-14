@@ -4,7 +4,7 @@ import User from '../models/Users';
 
 class StudentAddressController {
   async store(req, res) {
-    console.log(req.body);
+
     const schema = Yup.object().shape({
       street: Yup.string().required(),
       number: Yup.string().required(),

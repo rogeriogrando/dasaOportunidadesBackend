@@ -20,7 +20,7 @@ class CompanyJobsController {
     if (category !== 'company') {
       return res.status(403).json({ error: 'Acesso não autorizado.' });
     }
-    console.log(req.body);
+
     if (!(await schema.isValid(req.body))) {
       return res
         .status(400)
@@ -73,7 +73,6 @@ class CompanyJobsController {
       ),
     });
 
-    console.log(req.body);
 
     const { category } = await User.findByPk(req.userId);
     if (category !== 'company') {
