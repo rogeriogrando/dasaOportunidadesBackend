@@ -12,7 +12,7 @@ class UserController {
         .email()
         .required()
         .matches(
-          /^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@faesb.edu.br$/,
+          /^[_A-Za-z0-9-.\\+]+[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@faesb.edu.br$/,
           'Permitido apena e-mail institucional @faesb.edu.br'
         ),
       pass: Yup.string()
