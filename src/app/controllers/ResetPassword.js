@@ -28,7 +28,8 @@ class ResetPassword {
       if (!user) {
         return res.status(401).json({ error: 'Acesso negado.' });
       }
-      await user.update(pass);
+
+      await user.update({pass: pass});
       return res.status(202).send({ message: 'Senha alterada com sucesso' });
     } catch (err) {
       return res.status(401).json({ error: 'Acesso negado.' });

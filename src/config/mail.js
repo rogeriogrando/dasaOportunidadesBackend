@@ -1,15 +1,12 @@
-require('dotenv/config');
-
 export default {
-  host: process.env.MAIL_HOST,
-  port: process.env.MAIL_PORT,
+  host: 'smtp.mailtrap.io',
+  port: '2525',
   secure: false,
   auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
+    user: 'e4b60fadf34eb4',
+    pass: '32748fea7e7c29',
   },
   default: {
     from: 'Equipe Faesb <noreply@faesb.edu.br>',
   },
 };
-
