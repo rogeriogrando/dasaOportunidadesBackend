@@ -68,9 +68,7 @@ class CompanyJobsController {
       workload: Yup.string().required('Carga horária obrigatória'),
       workSchedule: Yup.string().required('Periodo obrigatório'),
       benefits: Yup.string().required('Benefícios obrigatório'),
-      applicationDeadline: Yup.string().required(
-        'Validade da vaga obrigatória'
-      ),
+
     });
 
 
@@ -130,7 +128,7 @@ class CompanyJobsController {
     if (category !== 'company') {
       return res.status(403).json({ error: 'Acesso não autorizado.' });
     }
-    const dateNow = format(new Date(), 'dd/MM/yyyy');
+    const dateNow = format(new Date(), 'yyyy/MM/dd');
 
     const data = await CompanyJobs.findAll({
       where: { user_id: req.userId, active: true,
