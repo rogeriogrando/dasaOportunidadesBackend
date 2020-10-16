@@ -10,7 +10,6 @@ class StudentAddressController {
       number: Yup.string().required(),
       neighborHood: Yup.string().required(),
       city: Yup.string().required(),
-      uf: Yup.string().required(),
     });
 
     const { category } = await User.findByPk(req.userId);
@@ -38,7 +37,6 @@ class StudentAddressController {
       number,
       neighborHood,
       city,
-      uf,
       user_id: req.userId,
     });
     return res.json(req.body);
@@ -50,7 +48,6 @@ class StudentAddressController {
       number: Yup.string().required(),
       neighborHood: Yup.string().required(),
       city: Yup.string().required(),
-      uf: Yup.string().required(),
     });
 
     const { category } = await User.findByPk(req.userId);

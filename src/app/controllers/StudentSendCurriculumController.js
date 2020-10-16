@@ -41,7 +41,6 @@ class StudentSendCurriculumController {
       number,
       neighborHood,
       city,
-      uf,
     } = await StudentAddress.findOne({
       where: { user_id: req.userId },
     });
@@ -132,7 +131,6 @@ class StudentSendCurriculumController {
       number,
       neighborHood,
       city,
-      uf,
       studentAcademicEducation,
       inglesLevel,
       espanholLevel,

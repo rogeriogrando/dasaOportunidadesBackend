@@ -40,7 +40,6 @@ class StudentGenerateCurriculum {
       number,
       neighborHood,
       city,
-      uf,
     } = await StudentAddress.findOne({
       where: { user_id: req.userId },
     });
@@ -121,7 +120,6 @@ class StudentGenerateCurriculum {
       number,
       neighborHood,
       city,
-      uf,
       studentAcademicEducation,
       inglesLevel,
       espanholLevel,
