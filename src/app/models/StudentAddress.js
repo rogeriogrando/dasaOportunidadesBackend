@@ -9,7 +9,6 @@ class StudentAddress extends Model {
         number: Sequelize.STRING(15),
         neighborHood: Sequelize.STRING(255),
         city: Sequelize.STRING(255),
-        uf: Sequelize.STRING(2),
       },
       {
         sequelize,

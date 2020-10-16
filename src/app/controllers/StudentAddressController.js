@@ -31,7 +31,7 @@ class StudentAddressController {
       return res.status(400).json({ error: 'Dados pessoais já cadastrado.' });
     }
 
-    const { street, number, neighborHood, city, uf } = req.body;
+    const { street, number, neighborHood, city } = req.body;
     await StudentAddress.create({
       street,
       number,
