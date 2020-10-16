@@ -20,7 +20,27 @@ module.exports = {
         type: Sequelize.STRING(255),
         allowNull: false,
       },
+      others: {
+        type: Sequelize.STRING(255),
+        allowNull: false,
+      },
       others_level: {
+        type: Sequelize.STRING(255),
+        allowNull: false,
+      },
+      excel_level: {
+        type: Sequelize.STRING(255),
+        allowNull: false,
+      },
+      word_level: {
+        type: Sequelize.STRING(255),
+        allowNull: false,
+      },
+      power_point_level: {
+        type: Sequelize.STRING(255),
+        allowNull: false,
+      },
+      computer: {
         type: Sequelize.STRING(255),
         allowNull: false,
       },

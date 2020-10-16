@@ -7,8 +7,9 @@ class StudentAdditionalTrainingController {
     const schema = Yup.object().shape({
       inglesLevel: Yup.string().required(),
       espanholLevel: Yup.string().required(),
-      othersLevel: Yup.string().required(),
-      computerLevel: Yup.string().required(),
+      excelLevel: Yup.string().required(),
+      wordLevel: Yup.string().required(),
+      powerPointLevel: Yup.string().required(),
     });
 
     const { category } = await User.findByPk(req.userId);
@@ -22,11 +23,24 @@ class StudentAdditionalTrainingController {
         .json({ error: 'Campos com informações incorretas.' });
     }
 
-    const { inglesLevel, espanholLevel, othersLevel, computerLevel } = req.body;
+    const { inglesLevel,
+      espanholLevel,
+      others,
+      othersLevel,
+      excelLevel,
+      wordLevel,
+      powerPointLevel,
+      computer,
+      computerLevel, } = req.body;
     const response = await StudentAdditionalTraining.create({
       inglesLevel,
       espanholLevel,
+      others,
       othersLevel,
+      excelLevel,
+      wordLevel,
+      powerPointLevel,
+      computer,
       computerLevel,
       user_id: req.userId,
     });
@@ -37,8 +51,9 @@ class StudentAdditionalTrainingController {
     const schema = Yup.object().shape({
       inglesLevel: Yup.string().required(),
       espanholLevel: Yup.string().required(),
-      othersLevel: Yup.string().required(),
-      computerLevel: Yup.string().required(),
+      excelLevel: Yup.string().required(),
+      wordLevel: Yup.string().required(),
+      powerPointLevel: Yup.string().required(),
     });
 
     const { category } = await User.findByPk(req.userId);

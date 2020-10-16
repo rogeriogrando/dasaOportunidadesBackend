@@ -46,6 +46,8 @@ class StudentPersonalDataController {
       children,
       cnh,
     } = req.body;
+    console.log(req.body);
+    console.log(req.userId);
     await StudentPersonalData.create({
       name,
       email,

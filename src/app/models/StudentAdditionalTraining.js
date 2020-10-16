@@ -8,6 +8,11 @@ class StudentAdditionalTraining extends Model {
         inglesLevel: Sequelize.STRING(255),
         espanholLevel: Sequelize.STRING(255),
         othersLevel: Sequelize.STRING(255),
+        others: Sequelize.STRING(255),
+        excelLevel: Sequelize.STRING(255),
+        wordLevel: Sequelize.STRING(255),
+        powerPointLevel: Sequelize.STRING(255),
+        computer: Sequelize.STRING(255),
         computerLevel: Sequelize.STRING(255),
       },
       {
