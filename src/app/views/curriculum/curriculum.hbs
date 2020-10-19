@@ -1,18 +1,18 @@
 <div style="position: absolute; top: 25px; left: 50px; right: 50px; text-align: justify;">
 
   <div style="text-align: center;">
-    <h2 style="font-weight: bold; font-size: 14px;">
+    <h2 style="font-weight: bold; font-size: 13px;">
       Currículo
     </h2>
 
     {{#if office}}
-    <h3 style="font-weight: bold; font-size: 14px;">Vaga predendida: {{{ office }}}</h3>
+    <h3 style="font-weight: bold; font-size: 13px;">Vaga predendida: {{{ office }}}</h3>
     {{/if}}
 
   </div>
 
 
-  <h3 style="font-size: 14px;">Dados Pessoais</h3>
+  <h3 style="font-size: 13px;">Dados Pessoais</h3>
   <div>
     <table style="font-size: 11px;">
       <tr>
@@ -65,7 +65,7 @@
 
   </div>
 
-  <h3 style="font-size: 14px;">Formação Acadêmica</h3>
+  <h3 style="font-size: 13px;">Formação Acadêmica</h3>
 
   {{#each studentAcademicEducation}}
   <div>
@@ -93,7 +93,7 @@
 
   </div>
   {{/each}}
-  <h3 style="font-size: 14px;">Conhecimentos Adicionais</h3>
+  <h3 style="font-size: 13px;">Conhecimentos Adicionais</h3>
   <div>
 
     <table style="font-size: 11px;">
@@ -102,8 +102,18 @@
         <td>{{{ inglesLevel }}}</td>
         <td style="font-weight: bold;">Espanhol:</td>
         <td>{{{ espanholLevel }}}</td>
-        <td style="font-weight: bold;">Outras Linguas:</td>
+        <td style="font-weight: bold;">{{{ others }}}</td>
         <td>{{{ othersLevel }}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Excel:</td>
+        <td>{{{ excelLevel }}}</td>
+        <td style="font-weight: bold;">Word:</td>
+        <td>{{{ wordLevel }}}</td>
+        <td style="font-weight: bold;">Power Point:</td>
+        <td>{{{ powerPointLevel }}}</td>
+        <td style="font-weight: bold;">{{{ computer }}}:</td>
+        <td>{{{ computerLevel }}}</td>
       </tr>
 
     </table>
@@ -116,7 +126,7 @@
 
     </table>
   </div>
-  <h3 style="font-size: 14px;">Experiências Profissionais</h3>
+  <h3 style="font-size: 13px;">Experiências Profissionais</h3>
 
   {{#each studentProfessionalExperiences}}
   <div>
