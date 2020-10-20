@@ -32,19 +32,21 @@ class SessionController {
     const { id, name, category, active } = user;
 
     if (active === false) {
-      const token = jwt.sign({ id }, authConfig.secret, {
-        expiresIn: authConfig.expiresIn,
-      });
+      if (category === 'aluno') {
+        const token = jwt.sign({ id }, authConfig.secret, {
+          expiresIn: authConfig.expiresIn,
+        });
 
-      await Mail.sendMail({
-        to: `${name} <${email}>`,
-        subject: 'Ativação da conta',
-        template: 'activateaccountpend',
-        context: {
-          token,
-          name,
-        },
-      });
+        await Mail.sendMail({
+          to: `${name} <${email}>`,
+          subject: 'Ativação da conta',
+          template: 'activateaccountpend',
+          context: {
+            token,
+            name,
+          },
+        });
+      }
       return res.status(401).json({ error: 'Verifique seu e-mail!' });
     } else {
       return res.json({

@@ -74,7 +74,7 @@ class CompanyJobsInactiveController {
       return res.status(403).json({ error: 'Acesso não autorizado.' });
     }
 
-    const dateNow = format(new Date(), 'dd/MM/yyyy');
+    const dateNow = format(new Date(), 'yyyy/MM/dd');
 
     const data = await CompanyJobs.findAll({
       where: { user_id: req.userId,
