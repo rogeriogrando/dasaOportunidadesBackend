@@ -20,7 +20,7 @@ class ActivateAccount {
 
       await Mail.sendMail({
         to: `${user.name} <${user.email}>`,
-        subject: 'Ativação da conta',
+        subject: 'Conta ativada com sucesso!!!',
         template: 'activateaccount',
         context: {
           token,
