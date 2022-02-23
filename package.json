@@ -31,7 +31,7 @@
     "nodemailer": "^6.4.10",
     "nodemailer-express-handlebars": "^4.0.0",
     "pdfkit": "^0.10.0",
-    "pg": "^7.12.1",
+    "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.18.4",
     "validate-date": "^2.0.0",
